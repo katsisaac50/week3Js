@@ -107,16 +107,16 @@ for (i = 0; i < books.length; i++) {
 }
 
 let newObject = [{
-    "how_to_win_friends_and_influence_people": ".4865.jpg",
-    "dreams_from_my_father": ".9781921351433.jpg",
-    "think_big_and_grow_rich": "book-think-and-grow-rich.jpg",
-    "everything_i_never_told_you": "EVERYTHING I NEVER TOLD YOU.jpg",
-    "everyone_hanging_out_without_me": "10335308.jpg",
-    "long_walk_to_freedom": "Long-Walk-to-Freedom.jpg",
-    "how_far_we_slaves_have_come": "How-Far-We-Slaves-Have-Come_FINAL.jpg",
-    "spear_of_the_nation": "spear_of_the_nation",
-    "discourseon_colonialism": "513+NepPdvL._SX331_BO1204203200_.jpg",
-    "law_of_success": "LAW OF SUCCESS.jpeg",
+    "how_to_win_friends_and_influence_people": ".img/4865.jpg",
+    "dreams_from_my_father": ".img/9781921351433.jpg",
+    "think_big_and_grow_rich": ".img/book-think-and-grow-rich.jpg",
+    "everything_i_never_told_you": ".img/EVERYTHING I NEVER TOLD YOU.jpg",
+    "everyone_hanging_out_without_me": ".img/10335308.jpg",
+    "long_walk_to_freedom": ".img/Long-Walk-to-Freedom.jpg",
+    "how_far_we_slaves_have_come": ".img/How-Far-We-Slaves-Have-Come_FINAL.jpg",
+    "spear_of_the_nation": ".img/spear_of_the_nation",
+    "discourseon_colonialism": ".img/513+NepPdvL._SX331_BO1204203200_.jpg",
+    "law_of_success": ".img/LAW OF SUCCESS.jpeg",
 
 }]
 let ul = document.createElement("ul");
