@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p,
+h2:first-letter {
+    text-transform: capitalize
+}
