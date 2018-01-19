@@ -101,30 +101,35 @@ let book_s = [{
     },
 
 ]
-let container = document.createElement("div");
-container.className = "wrapper";
+let content = document.createElement("div");
+document.querySelector("body").appendChild(content);
+content.className = "wrapper";
+let heading = document.createElement("h1");
+heading.style.position = "absolute";
+heading.style.top = 0 + 'px';
+//heading.style.left = 0 + 'px';
+document.querySelector("body").appendChild(heading);
+heading.innerHTML = "THE BOOKS I HAVE READ OR TO BE READ";
 
 function books(read_Books) {
     let book_id = "";
     for (let i = 0; i < book_s.length; i++) {
         book_id += book_s[i];
 
+
+
+        let container = document.createElement("div");
+        container.className = "grid";
         let Title = document.createElement("h3");
         let ul = document.createElement("ul");
         let author = document.createElement("li");
         let lang = document.createElement("li");
         let bookImg = document.createElement("img");
-
-
-        let content = document.createElement("div");
-        document.querySelector("body").appendChild(container);
-        // document.querySelector("body").appendChild(content);
-
-        content.className = "grid";
-        container.appendChild(content)
-        content.appendChild(bookImg);
-        content.appendChild(Title);
-        content.appendChild(ul);
+        //document.querySelector("body").appendChild(container);
+        content.appendChild(container);
+        container.appendChild(bookImg);
+        container.appendChild(Title);
+        container.appendChild(ul);
         ul.appendChild(author);
         ul.appendChild(lang);
         Title.innerHTML = book_s[i].title;
