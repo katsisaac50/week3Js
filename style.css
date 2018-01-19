@@ -1,62 +1,53 @@
-                                                                                                                                                                                                                                                                                                        * {
-                                                                                                                                                                                                                                                                                                            box-sizing: border-box;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        body {
-                                                                                                                                                                                                                                                                                                            background-color: #e9ebee;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        .wrapper {
-                                                                                                                                                                                                                                                                                                            display: grid;
-                                                                                                                                                                                                                                                                                                            grid-template-columns: 420px 420px 420px;
-                                                                                                                                                                                                                                                                                                            grid-template-rows: repeat(3, 610px);
-                                                                                                                                                                                                                                                                                                            margin: 100px 10px 10px 10px;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        h1 {
-                                                                                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                                                                                            position: relativea;
-                                                                                                                                                                                                                                                                                                            background-color: grey;
-                                                                                                                                                                                                                                                                                                            width: 60%;
-                                                                                                                                                                                                                                                                                                            z-index: 1;
-                                                                                                                                                                                                                                                                                                            display: block;
-                                                                                                                                                                                                                                                                                                            left: 20%;
-                                                                                                                                                                                                                                                                                                            padding: 5px;
-                                                                                                                                                                                                                                                                                                            margin-top: 10px;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        p,
-                                                                                                                                                                                                                                                                                                        h3:first-letter {
-                                                                                                                                                                                                                                                                                                            text-transform: capitalize
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        .img {
-                                                                                                                                                                                                                                                                                                            box-sizing: border-box;
-                                                                                                                                                                                                                                                                                                            display: block;
-                                                                                                                                                                                                                                                                                                            margin: 1px auto;
-                                                                                                                                                                                                                                                                                                            border-radius: 5px;
-                                                                                                                                                                                                                                                                                                            width: 10em;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        .grid:nth-child(10) {
-                                                                                                                                                                                                                                                                                                            grid-row: 4/ 4;
-                                                                                                                                                                                                                                                                                                            grid-column: 1/ 4;
-                                                                                                                                                                                                                                                                                                            width: 99%;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        .grid {
-                                                                                                                                                                                                                                                                                                            padding: 10px;
-                                                                                                                                                                                                                                                                                                            border: solid 1px white;
-                                                                                                                                                                                                                                                                                                            background: red;
-                                                                                                                                                                                                                                                                                                            width: 400px;
-                                                                                                                                                                                                                                                                                                            margin: 10px;
-                                                                                                                                                                                                                                                                                                            font-size: 150%;
-                                                                                                                                                                                                                                                                                                            border-radius: 5px;
-                                                                                                                                                                                                                                                                                                            color: #fff;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        .grid:nth-child(even) {
-                                                                                                                                                                                                                                                                                                            background-color: #ccc;
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                        @media only screen and (min-width: 580px) {}
+ * {
+     box-sizing: border-box;
+}
+ body {
+     background-color: #e9ebee;
+}
+ .wrapper {
+     display: grid;
+     grid-template-columns: 420px 420px 420px;
+     grid-template-rows: repeat(3, 610px);
+     margin: 100px 10px 10px 10px;
+}
+ h1 {
+     text-align: center;
+     position: relativea;
+     background-color: grey;
+     width: 60%;
+     z-index: 1;
+     display: block;
+     left: 20%;
+     padding: 5px;
+     margin-top: 10px;
+}
+ p, h3:first-letter {
+     text-transform: capitalize 
+}
+ .img {
+     box-sizing: border-box;
+     display: block;
+     margin: 1px auto;
+     border-radius: 5px;
+     width: 10em;
+}
+ .grid:nth-child(10) {
+     grid-row: 4/ 4;
+     grid-column: 1/ 4;
+     width: 99%;
+}
+ .grid {
+     padding: 10px;
+     border: solid 1px white;
+     background: red;
+     width: 400px;
+     margin: 10px;
+     font-size: 150%;
+     border-radius: 5px;
+     color: #fff;
+}
+ .grid:nth-child(even) {
+     background-color: #ccc;
+}
+ @media only screen and (min-width: 580px) {
+}
