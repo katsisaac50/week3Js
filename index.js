@@ -1,13 +1,28 @@
 console.log("script loaded")
-let readBooks = ["dale carnegie how to win friends and influence people", "obama dreams from my father", "napoleon hill think big and grow rich", "napoleon hill law of success", "alice is everyone hanging out without me", "celeste ng everything i never told you", "nelson mandela long walk to freedom", "nelson mandela and fidel castro how far we slaves have come", "janet cherry spear of the nation", "aime cesaire discourseon colonialism"]
 
+let readBooks = ["dale_carnegie_how_to_win_friends_and_influence_people", "obama_dreams_from_my_father", "napoleon_hill_think_big_and_grow_rich", "napoleon_hill_law_of_success", "alice_is_everyone_hanging_out_without me", "celeste_ng_everything_i_never_told_you", "nelson_mandela_long_walk_to_freedom", "nelson_mandela_and_fidel_castro_how_far_we_slaves_have_come", "janet_cherry_spear_of_the_nation", "aime_cesaire_discourseon_colonialism"]
+    /*
+    function books(read_Books) {
+        let book_id = "";
+        for (let i = 0; i < readBooks.length; i++) {
+            book_id += readBooks[i]
+            let ul = document.createElement("ul");
+            let li = document.createElement("li");
+            document.querySelector("body").appendChild(ul);
+            ul.appendChild(li);
+            li.innerHTML = readBooks[i];
+        }
+        return book_id;
+    }
 
-let books = [{
+    console.log(books(readBooks))*/
+
+let book_s = [{
         book_id: "how_to_win_friends_and_influence_people",
         title: "how to win friends and influence people",
         author: "dale carnegie",
         language: "english",
-
+        bookCover: "img/4865.jpg",
 
     },
     {
@@ -15,7 +30,7 @@ let books = [{
         title: "dreams from my father",
         author: "obama",
         language: "english",
-
+        bookCover: "img/9781921351433.jpg",
 
     },
     {
@@ -23,7 +38,7 @@ let books = [{
         title: "think big and grow rich",
         author: "napoleon hill",
         language: "english",
-
+        bookCover: "img/book-think-and-grow-rich.jpg",
 
     },
     {
@@ -31,7 +46,7 @@ let books = [{
         title: "everything i never told you",
         author: "celeste ng",
         language: "english",
-
+        bookCover: "img/EVERYTHING I NEVER TOLD YOU.jpg",
 
     },
     {
@@ -39,7 +54,7 @@ let books = [{
         title: "everyone hanging out without me",
         author: "alice",
         language: "english",
-
+        bookCover: "img/10335308.jpg",
 
     },
     {
@@ -47,7 +62,7 @@ let books = [{
         title: "long walk to freedom",
         author: "nelson madenla",
         language: "english",
-
+        bookCover: "img/Long-Walk-to-Freedom.jpg",
 
     },
     {
@@ -55,6 +70,7 @@ let books = [{
         title: "how far we slaves have come",
         author: "nelson mandela and fiderocastro",
         language: "english",
+        bookCover: "img/How-Far-We-Slaves-Have-Come_FINAL.jpg",
 
 
     },
@@ -63,7 +79,7 @@ let books = [{
         title: "spear of the nation",
         author: "janet cherry",
         language: "english",
-
+        bookCover: "img/spear_of_the_nation.jpg",
 
     },
     {
@@ -71,6 +87,7 @@ let books = [{
         title: "discourseon colonialism",
         author: "aime_cesaire",
         language: "english",
+        bookCover: "img/513+NepPdvL._SX331_BO1204203200_.jpg",
 
 
     },
@@ -79,65 +96,111 @@ let books = [{
         title: "law of success",
         author: "napoleon hill",
         language: "english",
-
+        bookCover: "img/LAW OF SUCCESS.jpeg",
 
     },
 
 ]
+let container = document.createElement("div");
+container.className = "wrapper";
+
+function books(read_Books) {
+    let book_id = "";
+    for (let i = 0; i < book_s.length; i++) {
+        book_id += book_s[i];
+
+        let Title = document.createElement("h3");
+        let ul = document.createElement("ul");
+        let author = document.createElement("li");
+        let lang = document.createElement("li");
+        let bookImg = document.createElement("img");
 
 
+        let content = document.createElement("div");
+        document.querySelector("body").appendChild(container);
+        // document.querySelector("body").appendChild(content);
 
-for (i = 0; i < books.length; i++) {
-    //console.log(books[i])
-    const body = document.querySelector('body');
-    const h1 = document.createElement('h1');
-    const h2 = document.createElement('h2');
-    const p = document.createElement('p');
-    const ul = document.createElement('ul');
-    const li = document.createElement('li');
-    h1.innerHTML = books[i].title;
-    h2.innerHTML = books[i].author;
-    p.innerHTML = books[i].language;
-    li.innerHTML = "My favorite dish is" + " " + books[i].book_id;
-    body.appendChild(h1);
-    body.appendChild(h2);
-    body.appendChild(p);
-    body.appendChild(ul);
-    ul.appendChild(li);
+        content.className = "grid";
+        container.appendChild(content)
+        content.appendChild(bookImg);
+        content.appendChild(Title);
+        content.appendChild(ul);
+        ul.appendChild(author);
+        ul.appendChild(lang);
+        Title.innerHTML = book_s[i].title;
+        author.innerHTML = book_s[i].author;
+        lang.innerHTML = book_s[i].language;
+        bookImg.src = book_s[i].bookCover;
+        bookImg.className = "img";
+    }
+    return book_id;
 }
 
-let newObject = [{
-    "how_to_win_friends_and_influence_people": ".img/4865.jpg",
-    "dreams_from_my_father": ".img/9781921351433.jpg",
-    "think_big_and_grow_rich": ".img/book-think-and-grow-rich.jpg",
-    "everything_i_never_told_you": ".img/EVERYTHING I NEVER TOLD YOU.jpg",
-    "everyone_hanging_out_without_me": ".img/10335308.jpg",
-    "long_walk_to_freedom": ".img/Long-Walk-to-Freedom.jpg",
-    "how_far_we_slaves_have_come": ".img/How-Far-We-Slaves-Have-Come_FINAL.jpg",
-    "spear_of_the_nation": ".img/spear_of_the_nation",
-    "discourseon_colonialism": ".img/513+NepPdvL._SX331_BO1204203200_.jpg",
-    "law_of_success": ".img/LAW OF SUCCESS.jpeg",
-
-}]
-let ul = document.createElement("ul");
+console.log(books(readBooks))
+    /*let div = document.createElement("div");
+    document.querySelector("body").appendChild(div)
+    div.id = "contain";
 
 
-for (i = 0; i < newObject.length; i++) {
-    console.log(newObject[i])
+    function createNewUL() {
+        let i = 0;
+        while (i < books.length) {
+            let books_list = document.createElement("ul");
+            document.getElementById("contain").appendChild(books_list)
+            books_list.id = books[i].title;
+            i++
+        }
+    }
 
-    li.innerHTML = "My favorite dish is" + " " + newObject[i];
+    createNewUL();
 
-}
+    function newListItems() {
+        for (let i = 0; i < books.length; i++) {
+            let j = 0;
+            while (j < books.length) {
+                let bookTitle = document.createElement("h3");
+                document.getElementById(books[i].title).appendChild(bookTitle)
+                bookTitle.className = "title";
+                bookTitle.innerHTML = books[i].title.replace(/_/g, " ");
+            }
+        }
+    }
 
+    newListItems();
+    /*
+    for (i = 0; i < books.length; i++) {
+        //console.log(books[i])
+        const body = document.querySelector('body');
+        const div = document.createElement('div');
+        const h1 = document.createElement('h1');
+        const h2 = document.createElement('h2');
+        const p = document.createElement('p');
+        const ul = document.createElement('ul');
+        const li = document.createElement('li');
+        h1.innerHTML = books[i].title;
+        h2.innerHTML = books[i].author;
+        p.innerHTML = books[i].language;
+        li.innerHTML = "My favorite dish is" + " " + books[i].book_id;
+        body.appendChild(div);
+        body.appendChild(h1);
+        body.appendChild(h2);
+        body.appendChild(p);
+        body.appendChild(ul);
+        ul.appendChild(li);
+        div.appendChild(ul);
 
+    }
 
-//console.log(Object.getOwnPropertyNames(newObject));
+    let newObject = [{
+        "how_to_win_friends_and_influence_people": ".img/4865.jpg",
+        "dreams_from_my_father": ".img/9781921351433.jpg",
+        "think_big_and_grow_rich": ".img/book-think-and-grow-rich.jpg",
+        "everything_i_never_told_you": ".img/EVERYTHING I NEVER TOLD YOU.jpg",
+        "everyone_hanging_out_without_me": ".img/10335308.jpg",
+        "long_walk_to_freedom": ".img/Long-Walk-to-Freedom.jpg",
+        "how_far_we_slaves_have_come": ".img/How-Far-We-Slaves-Have-Come_FINAL.jpg",
+        "spear_of_the_nation": ".img/spear_of_the_nation",
+        "discourseon_colonialism": ".img/513+NepPdvL._SX331_BO1204203200_.jpg",
+        "law_of_success": ".img/LAW OF SUCCESS.jpeg",
 
-let img = document.createElement("img");
-
-img.src = "4865.jpg";
-let src = document.querySelector("h1");
-
-
-src.appendChild(img);
-books
+    }]*/
