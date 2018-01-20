@@ -21,7 +21,7 @@
      padding: 5px;
      margin-top: 10px;
 }
- p, h3:first-letter {
+ li, h3:first-letter {
      text-transform: capitalize 
 }
  .img {
