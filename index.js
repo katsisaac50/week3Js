@@ -42,7 +42,7 @@ let book_s = [{
 }, {
 	book_id: "everyone_hanging_out_without_me",
 	title: "everyone hanging out without me",
-	author: "alice",
+	author: "mindy kaling",
 	language: "english",
 	bookCover: "img/10335308.jpg",
 }, {
