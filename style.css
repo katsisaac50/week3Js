@@ -1,5 +1,10 @@
- * {
-     box-sizing: border-box;
+* {
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
  body {
      background-color: #e9ebee;
@@ -30,6 +35,14 @@
      margin: 1px auto;
      border-radius: 5px;
      width: 10em;
+}
+.grid:hover {
+    position: relative;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 1000;
 }
  .grid:nth-child(10) {
      grid-row: 4/ 4;
