@@ -9,32 +9,34 @@
  body {
      background-color: #e9ebee;
 }
- .wrapper {
-     display: grid;
-     grid-template-columns: 420px 420px 420px;
-     grid-template-rows: repeat(3, 610px);
-     margin: 100px 10px 10px 10px;
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, 610px);
+    grid-gap: 10px;
+    margin: 6.25rem .625rem .625rem .625rem;
 }
  h1 {
-     text-align: center;
-     position: relativea;
-     background-color: grey;
-     width: 60%;
-     z-index: 1;
-     display: block;
-     left: 20%;
-     padding: 5px;
-     margin-top: 10px;
+    text-align: center;
+    position: relativea;
+    background-color: grey;
+    width: 85%;
+    z-index: 1;
+    display: block;
+    left: 6.5%;
+    padding: 1.25rem;
+    margin-top: 10px;
+    font-size: 1.3em;
 }
  li, h3:first-letter {
      text-transform: capitalize 
 }
  .img {
-     box-sizing: border-box;
-     display: block;
-     margin: 1px auto;
-     border-radius: 5px;
-     width: 10em;
+    box-sizing: border-box;
+    display: block;
+    margin: 1px auto;
+    border-radius: 5px;
+    width: 64%;
 }
 .grid:hover {
     position: relative;
@@ -49,7 +51,33 @@
      grid-column: 1/ 4;
      width: 99%;
 }
- .grid {
+.grid {
+    padding: 10px;
+    border: solid 1px white;
+    background: red;
+    width: 100%;
+    margin: 10px;
+    font-size: 150%;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+ .grid:nth-child(even) {
+     background-color: #ccc;
+}
+ @media only screen and (min-width: 580px) {
+       h1 {
+     text-align: center;
+     position: relativea;
+     background-color: grey;
+     width: 60%;
+     z-index: 1;
+     display: block;
+     left: 20%;
+     padding: 5px;
+     margin-top: 10px;
+}
+     .grid {
      padding: 10px;
      border: solid 1px white;
      background: red;
@@ -59,8 +87,11 @@
      border-radius: 5px;
      color: #fff;
 }
- .grid:nth-child(even) {
-     background-color: #ccc;
+      .img {
+     box-sizing: border-box;
+     display: block;
+     margin: 1px auto;
+     border-radius: 5px;
+     width: 10em;
 }
- @media only screen and (min-width: 580px) {
 }
